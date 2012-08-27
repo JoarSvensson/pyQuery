@@ -1,11 +1,17 @@
 #-------------------------------------------------------------------------------
-# Name:        pyQuery
+# Name:        pyQuery.py
 #
 # Author:      Joar Svensson
 #
 # Created:     19-08-2012
 # Copyright:   (c) Joar Svensson 2012
 # Licence:     GPLv3
+#
+# Download: git@github.com:JoarSvensson/pyQuery.git
+#
+# Usage: python pyQuery.py "John Doe" *.txt C:\TestFolder
+#        The search string is case sensitive
+#
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
@@ -13,7 +19,7 @@
 import glob, os, sys, time
 
 # Define query function
-def doQuery(query,fileSuffix,path):
+def main(query,fileSuffix,path):
     try:
         print("Executing query.. please wait")
         startTime = time.clock()
@@ -45,8 +51,10 @@ def doQuery(query,fileSuffix,path):
         pass
 
 # Perform querying of files in given folder
-try:
-    doQuery(sys.argv[1],sys.argv[2],sys.argv[3])
 
-except IndexError:
-    print("Please pass three arguments, (query path filesuffix)")
+if __name__ == "__main__":
+    try:
+        main(sys.argv[1],sys.argv[2],sys.argv[3])
+
+    except IndexError:
+        print("Please pass three arguments, (query filesuffix path)")
