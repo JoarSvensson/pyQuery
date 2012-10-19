@@ -26,6 +26,7 @@ def main(query,fileSuffix,path):
         totalFileSize = 0
         totalTimesFound = 0
         os.chdir(path)
+		
         for fileName in glob.glob(fileSuffix):
             fileSize = os.path.getsize(fileName)
             totalFileSize = totalFileSize + fileSize
@@ -41,14 +42,14 @@ def main(query,fileSuffix,path):
                 "first time at index:", index, "in file", fileName)
 
             else:
-                pass
+                print(query, "was not found!")
 
         print ("Query executed in",time.clock() - startTime,
         "seconds, with",totalTimesFound, "results found in",
         totalFileSize/1024/1024, "Mbytes of data")
 
-    except SyntaxError:
-        pass
+    except SyntaxError error:
+        print(error)
 
 # Perform querying of files in given folder
 
