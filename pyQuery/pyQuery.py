@@ -3,7 +3,7 @@
 #
 # Author:      Joar Svensson
 #
-# Created:     19-08-2012
+# Created:     2012-08-19
 # Copyright:   (c) Joar Svensson 2012
 # Licence:     GPLv3
 #
@@ -48,7 +48,7 @@ def main(query,fileSuffix,path):
         "seconds, with",totalTimesFound, "results found in",
         totalFileSize/1024/1024, "Mbytes of data")
 
-    except SyntaxError error:
+    except SyntaxError, error:
         print(error)
 
 # Perform querying of files in given folder
