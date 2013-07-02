@@ -4,8 +4,7 @@
 # Author:      Joar Svensson
 #
 # Created:     2012-08-19
-# Copyright:   (c) Joar Svensson 2012
-# Licence:     GPLv3
+# License:     GPLv3
 #
 # Download: git@github.com:JoarSvensson/pyQuery.git
 #
